@@ -1,10 +1,15 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Products from "./pages/Products";
+import Counter from "./pages/Counter";
+
 function App() {
   return (
-    <>
-      <div>
-        <p>Hello World Client</p>
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/products" element={<Products />} />
+        <Route path="/counter" element={<Counter />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
